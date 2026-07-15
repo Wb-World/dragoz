@@ -9,21 +9,24 @@ const DragozLogo = ({ size = 32 }) => (
   />
 );
 
+// ── DATA ──────────────────────────────────────────────────────────────────────
+
 const CORE_PILLARS = [
   {
-    icon: '🔐',
     title: 'Cyber Security',
     desc: 'Tools, research, and practices that come straight from practitioners defending real systems.'
   },
   {
-    icon: '🤖',
     title: 'Artificial Intelligence',
     desc: 'Practical AI tooling and automation, not hype.'
   },
   {
-    icon: '🛠️',
     title: 'Tech Product Development',
     desc: 'Turning practitioner know-how into real, usable hardware and software products.'
+  },
+  {
+    title: 'IoT Hardware',
+    desc: 'Internet of Things gadgets and embedded hardware built and tested in real environments by engineers.'
   }
 ];
 
@@ -33,11 +36,11 @@ const WHY_DRAGOZ = [
     desc: 'Every product ships only after real-world testing.'
   },
   {
-    title: 'Documentation-first',
+    title: 'Documentation first',
     desc: 'Clear setup guides, specs, and troubleshooting for every tool.'
   },
   {
-    title: 'Community-backed',
+    title: 'Community backed',
     desc: 'Supported by a growing open-source, nonprofit community of creators, ethical hackers, and AI builders.'
   },
   {
@@ -50,23 +53,16 @@ const WHAT_WE_DO = [
   { title: 'Cyber Security', desc: 'Practitioner-built security tools, research, and resources drawn from real-world defense and offense work.' },
   { title: 'AI Development', desc: 'Practical, tested AI tooling and automation built for creators and engineers, not hype.' },
   { title: 'Tech Product Development', desc: 'Hardware and software products designed around real-world use cases, from concept to shelf.' },
-  { title: 'Documentation & Guides', desc: 'In-depth setup docs, API references, and troubleshooting resources for every product.' },
-  { title: 'Open-Source & Nonprofit Community', desc: 'The Drago Community operates as a nonprofit, open-source initiative, giving builders free access to tools, research, and collaboration space.' }
+  { title: 'Documentation and Guides', desc: 'In-depth setup docs, API references, and troubleshooting resources for every product.' },
+  { title: 'Open Source and Nonprofit Community', desc: 'The Drago Community operates as a nonprofit, open-source initiative, giving builders free access to tools, research, and collaboration space.' }
 ];
 
 const VALUES = [
   { name: 'Practitioner-Led', definition: 'Built by people who use the tools themselves, not just sell them.' },
-  { name: 'Transparency', definition: 'Clear specs, clear pricing, clear documentation — no surprises.' },
-  { name: 'Community-First', definition: 'We grow through an open-source, nonprofit community — not ad spend.' },
+  { name: 'Transparency', definition: 'Clear specs, clear pricing, clear documentation. No surprises.' },
+  { name: 'Community-First', definition: 'We grow through an open-source, nonprofit community. Not ad spend.' },
   { name: 'Security by Default', definition: 'Every product is engineered with cybersecurity best practices baked in.' },
-  { name: 'AI with Purpose', definition: 'AI is applied where it genuinely saves time or improves security — not bolted on for buzz.' }
-];
-
-const PARTNER_NETWORK = [
-  { name: 'Proworldz Academy', desc: 'Our training and certification division' },
-  { name: 'Amit University', desc: 'Academic partnership' },
-  { name: 'FC Kovalam', desc: 'Sports academy partnership' },
-  { name: 'Tekkit', desc: 'Technology partner' }
+  { name: 'AI with Purpose', definition: 'AI is applied where it genuinely saves time or improves security. Not bolted on for buzz.' }
 ];
 
 const DOCS_DATA = {
@@ -92,19 +88,18 @@ const DOCS_DATA = {
         <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
           Vetted walkthroughs and specifications are provided for every cybersecurity, artificial intelligence, and hardware tech product in our catalog.
         </p>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
-          Our main focus spans three core pillars:
-        </p>
-        <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem', lineHeight: '1.6', listStyle: 'square' }}>
-          <li>🔐 Cyber Security — tools, research, and practices.</li>
-          <li>🤖 Artificial Intelligence — practical AI tooling and automation.</li>
-          <li>🛠️ Tech Product Development — turning practitioner know-how into products.</li>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>Our main focus spans four core pillars:</p>
+        <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem', lineHeight: '1.8', listStyle: 'disc' }}>
+          <li>Cyber Security: tools, research, and practices.</li>
+          <li>Artificial Intelligence: practical AI tooling and automation.</li>
+          <li>Tech Product Development: turning practitioner know-how into products.</li>
+          <li>IoT Hardware: embedded gadgets tested in real environments.</li>
         </ul>
       </div>
     )
   },
   'api-reference': {
-    title: 'API / Hardware Reference',
+    title: 'API and Hardware Reference',
     desc: 'API specifications and hardware schematics.',
     content: (
       <div>
@@ -125,7 +120,7 @@ const DOCS_DATA = {
         <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
           Our documentation-first standard ensures you have clear setup guides and troubleshooting resources so you never have to guess how something works.
         </p>
-        <div className="neo-card" style={{ padding: '1.5rem', background: 'var(--color-bg)' }}>
+        <div style={{ border: '2px solid #000', padding: '1.5rem', background: 'var(--color-bg)' }}>
           <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Need support or have questions?</h4>
           <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>Get in touch with our security and engineering divisions. We respond within a few business hours.</p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -138,15 +133,13 @@ const DOCS_DATA = {
   }
 };
 
+// ── COMPONENT ─────────────────────────────────────────────────────────────────
+
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDocTab, setActiveDocTab] = useState('getting-started');
-
-  // Contact form state
   const [contactForm, setContactForm] = useState({ name: '', email: '', type: '', message: '' });
   const [contactFeedback, setContactFeedback] = useState('');
-
-  // Newsletter state
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterFeedback, setNewsletterFeedback] = useState('');
 
@@ -158,7 +151,7 @@ export default function App() {
     }
     setContactFeedback('Submitting requirements...');
     setTimeout(() => {
-      setContactFeedback('Success: Your inquiry has been sent to Secure Worldz. We respond within 24 business hours.');
+      setContactFeedback('Your inquiry has been sent to Secure Worldz. We respond within 24 business hours.');
       setContactForm({ name: '', email: '', type: '', message: '' });
     }, 1000);
   };
@@ -168,19 +161,20 @@ export default function App() {
     if (!newsletterEmail) return;
     setNewsletterFeedback('Subscribing...');
     setTimeout(() => {
-      setNewsletterFeedback('Success: Welcome to Dragoz updates!');
+      setNewsletterFeedback('Welcome to Dragoz updates!');
       setNewsletterEmail('');
     }, 1000);
   };
 
   return (
     <div>
-      {/* ===== HEADER / NAVBAR ===== */}
+
+      {/* ===== NAVBAR ===== */}
       <header className="nav-bar">
         <div className="container nav-container">
           <a href="#" className="logo-wrap" aria-label="Dragoz Home">
             <div className="logo-badge">
-              <DragozLogo size={20} color="#ffffff" />
+              <DragozLogo size={20} />
             </div>
             <span style={{ letterSpacing: '0.05em' }}>DRAGOZ</span>
           </a>
@@ -196,8 +190,8 @@ export default function App() {
             <a href="#contact" className="neo-btn neo-btn-sm neo-btn-primary">GET STARTED</a>
           </nav>
 
-          <button 
-            className="mobile-toggle" 
+          <button
+            className="mobile-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Navigation"
             aria-expanded={mobileMenuOpen}
@@ -209,21 +203,21 @@ export default function App() {
         </div>
       </header>
 
-      {/* ===== HERO SECTION ===== */}
+      {/* ===== HERO ===== */}
       <section className="section" id="hero" style={{ background: 'var(--color-bg)' }}>
         <div className="container hero-layout">
           <div className="hero-content-left">
             <div className="neo-box-accent" style={{ marginBottom: '1.5rem', backgroundColor: 'var(--color-black)', color: 'var(--color-white)' }}>
-              ⚡ Powered by Secure Worldz
+              Powered by Secure Worldz
             </div>
-            
+
             <h1 className="hero-main-title">
-              Dragoz — Real Tools,<br />
+              Dragoz. Real Tools,<br />
               Built by <span style={{ background: 'var(--color-black)', color: 'var(--color-white)', padding: '0 8px', display: 'inline-block' }}>Practitioners</span>
             </h1>
 
             <p className="hero-main-subtitle">
-              Dragoz is a marketplace and knowledge hub for real tech products — IoT gadgets, security tools, and hardware — built and vetted by engineers who actually use this stuff every day. No filler, no hype. Just tools that work.
+              Dragoz is a marketplace and knowledge hub for real tech products. IoT gadgets, security tools, and hardware built and vetted by engineers who actually use this stuff every day. No filler, no hype. Just tools that work.
             </p>
 
             <div className="hero-ctas">
@@ -241,14 +235,14 @@ export default function App() {
                   <span className="visual-dot yellow"></span>
                   <span className="visual-dot green"></span>
                 </div>
-                <div className="visual-title">dragoz-terminal</div>
+                <div className="visual-title">dragoz terminal</div>
               </div>
-              <div style={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: '1.6', color: 'var(--color-black)' }}>
+              <div style={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: '1.8', color: 'var(--color-black)' }}>
                 <p style={{ color: '#666666' }}># Initializing Dragoz environment...</p>
-                <p><span style={{ color: 'var(--color-accent)' }}>$</span> dragoz init --practitioner</p>
-                <p style={{ color: 'var(--color-green)' }}>[OK] Loaded 🔐 Cybersecurity toolkits</p>
-                <p style={{ color: 'var(--color-green)' }}>[OK] Loaded 🤖 Practical AI configurations</p>
-                <p style={{ color: 'var(--color-green)' }}>[OK] Loaded 🛠️ IoT Hardware definitions</p>
+                <p><span style={{ color: 'var(--color-accent)' }}>$</span> dragoz init practitioner</p>
+                <p style={{ color: 'var(--color-accent)' }}>[OK] Loaded Cybersecurity toolkits</p>
+                <p style={{ color: 'var(--color-accent)' }}>[OK] Loaded Practical AI configurations</p>
+                <p style={{ color: 'var(--color-accent)' }}>[OK] Loaded IoT Hardware definitions</p>
                 <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>[STATUS] Built by engineers. Ready.</p>
               </div>
             </div>
@@ -256,7 +250,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ===== WHAT IS DRAGOZ? ===== */}
+      {/* ===== WHAT IS DRAGOZ ===== */}
       <section className="section" id="about" style={{ backgroundColor: 'var(--color-white)' }}>
         <div className="container">
           <div className="story-layout">
@@ -264,28 +258,28 @@ export default function App() {
               <div className="neo-box-accent" style={{ marginBottom: '1.25rem' }}>01. Overview</div>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>What is Dragoz?</h2>
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333', marginBottom: '1.5rem' }}>
-                Dragoz is the product and documentation home for tools designed by practitioners, for practitioners. Every product listed here has been built, tested, and refined by people working hands-on in cybersecurity, AI, and hardware engineering — not marketing teams guessing what creators need.
+                Dragoz is the product and documentation home for tools designed by practitioners, for practitioners. Every product listed here has been built, tested, and refined by people working hands-on in cybersecurity, AI, and hardware engineering. Not marketing teams guessing what creators need.
               </p>
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333' }}>
-                Dragoz is proudly powered by <strong>Secure Worldz</strong>, a multi-domain tech and security company offering cybersecurity services, web/app development, AI development, and training through Proworldz Academy.
+                Dragoz is proudly powered by <strong>Secure Worldz</strong>, a multi-domain tech and security company offering cybersecurity services, web and app development, AI development, and training through Proworldz Academy.
               </p>
             </div>
-            
+
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div className="neo-card" style={{ padding: '2rem' }}>
-                <h3 style={{ textTransform: 'uppercase' }}>🔧 Vetted by Engineers</h3>
-                <p style={{ color: '#555555', marginTop: '0.5rem', fontSize: '0.95rem' }}>Every hardware and software product ships only after hands-on verification.</p>
+                <h3 style={{ textTransform: 'uppercase', marginBottom: '0.5rem' }}>Vetted by Engineers</h3>
+                <p style={{ color: '#555555', fontSize: '0.95rem' }}>Every hardware and software product ships only after hands-on verification.</p>
               </div>
               <div className="neo-card" style={{ padding: '2rem' }}>
-                <h3 style={{ textTransform: 'uppercase' }}>📖 Documentation First</h3>
-                <p style={{ color: '#555555', marginTop: '0.5rem', fontSize: '0.95rem' }}>Setup logs, pins layouts, and schemas. No guessing how something operates.</p>
+                <h3 style={{ textTransform: 'uppercase', marginBottom: '0.5rem' }}>Documentation First</h3>
+                <p style={{ color: '#555555', fontSize: '0.95rem' }}>Setup logs, pin layouts, and schemas. No guessing how something operates.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== OUR FOCUS PILLARS ===== */}
+      {/* ===== OUR FOCUS ===== */}
       <section className="section" id="pillars" style={{ backgroundColor: 'var(--color-bg)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
@@ -296,7 +290,6 @@ export default function App() {
           <div className="pillars-container">
             {CORE_PILLARS.map((pillar, i) => (
               <div key={i} className="pillar-item-card">
-                <div className="pillar-icon-box">{pillar.icon}</div>
                 <h3 className="pillar-title-text">{pillar.title}</h3>
                 <p style={{ color: '#444444', lineHeight: '1.6' }}>{pillar.desc}</p>
               </div>
@@ -313,10 +306,10 @@ export default function App() {
             <h2 style={{ fontSize: '2.5rem' }}>Why Dragoz</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2rem' }}>
             {WHY_DRAGOZ.map((item, i) => (
               <div key={i} className="neo-card" style={{ padding: '2rem' }}>
-                <h3 style={{ fontSize: '1.35rem', marginBottom: '0.5rem' }}>{item.title}</h3>
+                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>{item.title}</h3>
                 <p style={{ color: '#444444', lineHeight: '1.5' }}>{item.desc}</p>
               </div>
             ))}
@@ -359,7 +352,7 @@ export default function App() {
 
             <a href="#community" className="quicklink-item-card">
               <div>
-                <h3 className="quicklink-title-text">Community &amp; Sponsors</h3>
+                <h3 className="quicklink-title-text">Community and Sponsors</h3>
                 <p style={{ color: '#555555', fontSize: '0.9rem' }}>Cyber Voyage and partner network.</p>
               </div>
               <span className="quicklink-arrow">&rarr;</span>
@@ -384,7 +377,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ===== ABOUT US - STORY & MISSION ===== */}
+      {/* ===== OUR STORY ===== */}
       <section className="section" id="story" style={{ backgroundColor: 'var(--color-white)' }}>
         <div className="container">
           <div className="story-layout" style={{ marginBottom: '5rem' }}>
@@ -392,10 +385,10 @@ export default function App() {
               <div className="neo-box-accent" style={{ marginBottom: '1.25rem' }}>05. Background</div>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Our Story</h2>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#333333', marginBottom: '1.5rem' }}>
-                Dragoz started as a simple idea: the best tech products aren't designed in boardrooms — they're built by the people who actually break, fix, and rebuild systems for a living. What began as an internal toolkit for practitioners grew into a full marketplace and documentation platform for real, practitioner-built tech.
+                Dragoz started as a simple idea: the best tech products are not designed in boardrooms. They are built by the people who actually break, fix, and rebuild systems for a living. What began as an internal toolkit for practitioners grew into a full marketplace and documentation platform for real, practitioner-built tech.
               </p>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#333333' }}>
-                We're part of the <strong>Secure Worldz</strong> family, alongside Proworldz Academy, giving Dragoz direct access to a deep bench of security engineers, red teamers, developers, and AI builders — the same people who create and stress-test every product we release.
+                We are part of the <strong>Secure Worldz</strong> family, alongside Proworldz Academy, giving Dragoz direct access to a deep bench of security engineers, red teamers, developers, and AI builders. The same people who create and stress-test every product we release.
               </p>
             </div>
 
@@ -403,7 +396,7 @@ export default function App() {
               <div className="neo-card" style={{ padding: '2.25rem' }}>
                 <h3 style={{ marginBottom: '1rem', textTransform: 'uppercase' }}>Our Mission</h3>
                 <p style={{ color: '#444444', fontSize: '0.95rem', lineHeight: '1.5' }}>
-                  To put honest, well-documented, practitioner-tested tools into the hands of creators, engineers, and hobbyists — backed by documentation good enough that you never have to guess how something works.
+                  To put honest, well-documented, practitioner-tested tools into the hands of creators, engineers, and hobbyists. Backed by documentation good enough that you never have to guess how something works.
                 </p>
               </div>
             </div>
@@ -411,10 +404,10 @@ export default function App() {
 
           <div style={{ marginBottom: '5rem' }}>
             <h3 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>What We Do</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
               {WHAT_WE_DO.map((item, i) => (
                 <div key={i} className="neo-card" style={{ padding: '2rem' }}>
-                  <h4 style={{ fontSize: '1.15rem', marginBottom: '0.5rem' }}>{item.title}</h4>
+                  <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{item.title}</h4>
                   <p style={{ color: '#555555', fontSize: '0.9rem', lineHeight: '1.5' }}>{item.desc}</p>
                 </div>
               ))}
@@ -422,14 +415,14 @@ export default function App() {
           </div>
 
           <div className="neo-card" style={{ padding: '3rem', marginBottom: '5rem' }}>
-            <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Drago Community — Open Source &amp; Nonprofit</h3>
+            <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Drago Community. Open Source and Nonprofit</h3>
             <p style={{ fontSize: '1.1rem', color: '#333333', lineHeight: '1.6', marginBottom: '2rem' }}>
-              The Drago Community is the nonprofit, open-source arm behind Dragoz. It exists to give cybersecurity researchers, AI builders, and product engineers a free, collaborative space to build, share, and learn — separate from the commercial side of the business.
+              The Drago Community is the nonprofit, open-source arm behind Dragoz. It exists to give cybersecurity researchers, AI builders, and product engineers a free, collaborative space to build, share, and learn. Separate from the commercial side of the business.
             </p>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem', fontWeight: '700' }}>
-              <li>🔓 Open-source first — tools, research, and resources shared openly wherever possible.</li>
-              <li>🌱 Nonprofit-driven — the community isn't run for profit; it exists to grow practitioner talent.</li>
-              <li>🤝 Open collaboration — anyone working in cybersecurity or AI can contribute or join.</li>
+              <li>Open-source first. Tools, research, and resources shared openly wherever possible.</li>
+              <li>Nonprofit driven. The community is not run for profit; it exists to grow practitioner talent.</li>
+              <li>Open collaboration. Anyone working in cybersecurity or AI can contribute or join.</li>
             </ul>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
               <a href="#contact" className="neo-btn neo-btn-primary">Join the Drago Community</a>
@@ -450,7 +443,7 @@ export default function App() {
               <tbody>
                 {VALUES.map((val, i) => (
                   <tr key={i}>
-                    <td>{val.name}</td>
+                    <td style={{ fontWeight: '800' }}>{val.name}</td>
                     <td style={{ color: '#333333' }}>{val.definition}</td>
                   </tr>
                 ))}
@@ -475,23 +468,23 @@ export default function App() {
             <div>
               <h3 style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>Jaiganesh Lakshmanan</h3>
               <p style={{ color: 'var(--color-accent)', fontWeight: '800', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
-                Founder &amp; CEO, Secure Worldz | Founder, Drago &amp; Proworldz
+                Founder and CEO, Secure Worldz | Founder, Drago and Proworldz
               </p>
 
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333' }}>
                 With over 10 years of experience in technology and cybersecurity, Jaiganesh Lakshmanan has worked with Fortune 10+ companies to strengthen their security infrastructure. He is the founder of both <strong>Drago</strong> (the Dragoz product line) and <strong>Proworldz Academy</strong>, and has personally trained over 1,000 students across cybersecurity, ethical hacking, AI development, and business growth.
               </p>
-              
+
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333', marginTop: '1rem' }}>
-                Jaiganesh specializes in vulnerability assessment and penetration testing, having discovered critical security flaws in major financial institutions. He's also a technology speaker, ethical hacker, AI developer, and business growth speaker.
+                Jaiganesh specializes in vulnerability assessment and penetration testing, having discovered critical security flaws in major financial institutions. He is also a technology speaker, ethical hacker, AI developer, and business growth speaker.
               </p>
 
-              <blockquote className="founder-quote-box">
-                "Security is not a product, but a process. My goal is to teach students how to think like both defender and attacker — and to understand how technology drives real business value."
-              </blockquote>
-
+              {/* <blockquote className="founder-quote-box">
+                "Security is not a product, but a process. My goal is to teach students how to think like both defender and attacker and to understand how technology drives real business value."
+              </blockquote> */}
+              <br />
               <div style={{ marginBottom: '2.5rem' }}>
-                <h4 style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '0.75rem', textTransform: 'uppercase' }}>Roles at a glance:</h4>
+                {/* <h4 style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '0.75rem', textTransform: 'uppercase' }}>Roles at a glance</h4> */}
                 <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                   <span className="neo-box-accent" style={{ background: '#fff', color: '#000' }}>Technology Speaker</span>
                   <span className="neo-box-accent" style={{ background: '#fff', color: '#000' }}>Ethical Hacker</span>
@@ -515,69 +508,70 @@ export default function App() {
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div className="neo-box-accent" style={{ marginBottom: '1rem' }}>07. Sponsors</div>
-            <h2 style={{ fontSize: '2.5rem' }}>Sponsors &amp; Partner Network</h2>
+            <h2 style={{ fontSize: '2.5rem' }}>Sponsors and Partner Network</h2>
+            <p style={{ color: '#555555', marginTop: '0.75rem', fontSize: '1.05rem', lineHeight: '1.5' }}>
+              Dragoz exists because of the builders, creators, and security practitioners who test our tools, share feedback, and help shape what we build next.
+            </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: '4rem', alignItems: 'flex-start' }}>
-            <div>
-              <h3>Community Sponsor</h3>
-              <div className="sponsor-card-block">
-                <h4 style={{ fontSize: '1.5rem', color: 'var(--color-accent)', marginBottom: '1rem' }}>Cyber Voyage</h4>
-                <p style={{ color: '#333333', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+          {/* Cyber Voyage sponsor — full width, prominent */}
+          <div className="neo-card" style={{ padding: '3.5rem', marginBottom: '3rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '3rem', alignItems: 'center' }}>
+              <div>
+                <div className="neo-box-accent" style={{ marginBottom: '1.25rem' }}>Community Sponsor</div>
+                <h3 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>Cyber Voyage</h3>
+                <p style={{ color: 'var(--color-accent)', fontWeight: '800', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+                  Official Community Sponsor of Dragoz
+                </p>
+              </div>
+              <div>
+                <p style={{ color: '#333333', lineHeight: '1.7', fontSize: '1.05rem', marginBottom: '1.5rem' }}>
                   Cyber Voyage is a proud community sponsor of Dragoz, supporting our mission to bring practitioner-built tools and documentation to creators and security enthusiasts worldwide.
                 </p>
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.95rem', fontWeight: '700', marginBottom: '1.5rem' }}>
-                  <li>🔗 Partnership focus: cybersecurity content collaboration, CTF challenges, community events</li>
-                  <li>💡 What they bring: supports practitioner-built tools and documentation globally</li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <h3>Trusted Partner Network</h3>
-              <p style={{ color: '#555555', marginBottom: '1.5rem' }}>Dragoz sits alongside a network of organizations already collaborating with Secure Worldz:</p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-                {PARTNER_NETWORK.map((item, i) => (
-                  <div key={i} className="partner-box-item">
-                    <h4 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{item.name}</h4>
-                    <p style={{ fontSize: '0.85rem', color: '#666666' }}>{item.desc}</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
+                  <div style={{ borderLeft: '4px solid var(--color-accent)', paddingLeft: '1rem' }}>
+                    <strong>Partnership focus:</strong> cybersecurity content collaboration, CTF challenges, and community events
                   </div>
-                ))}
+                  <div style={{ borderLeft: '4px solid var(--color-black)', paddingLeft: '1rem' }}>
+                    <strong>What they bring:</strong> supports practitioner-built tools and documentation globally
+                  </div>
+                </div>
+                <a href="#contact" className="neo-btn neo-btn-primary">Connect with Cyber Voyage</a>
               </div>
             </div>
           </div>
 
-          <div className="neo-card" style={{ marginTop: '5rem', padding: '3.5rem', textAlign: 'center' }}>
+          {/* Become a Sponsor CTA */}
+          <div style={{ border: 'var(--border-thick)', padding: '3rem', textAlign: 'center', background: 'var(--color-bg)', boxShadow: 'var(--shadow-flat-large)' }}>
             <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Become a Sponsor</h3>
-            <p style={{ color: '#444444', maxWidth: '650px', margin: '0 auto 2.5rem', fontSize: '1.1rem', lineHeight: '1.5' }}>
+            <p style={{ color: '#444444', maxWidth: '600px', margin: '0 auto 2.5rem', fontSize: '1.05rem', lineHeight: '1.5' }}>
               We work with IoT brands, cybersecurity companies, and creator-focused platforms on co-branded content, product collaborations, and community events.
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="#contact" className="neo-btn neo-btn-primary">Apply to Sponsor</a>
-              <a href="mailto:sponsors@dragotool.shop" className="neo-btn neo-btn-black">Partnership Inquiries &rarr;</a>
+              <a href="mailto:sponsors@dragotool.shop" className="neo-btn neo-btn-black">Partnership Inquiries</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== DOCS SECTION ===== */}
+      {/* ===== DOCS ===== */}
       <section className="section" id="docs" style={{ backgroundColor: 'var(--color-bg)' }}>
         <div className="container">
           <div style={{ marginBottom: '4rem' }}>
             <div className="neo-box-accent" style={{ marginBottom: '1rem' }}>08. Documentation</div>
-            <h2 style={{ fontSize: '2.5rem' }}>Developer Guides &amp; References</h2>
+            <h2 style={{ fontSize: '2.5rem' }}>Developer Guides and References</h2>
             <p style={{ color: '#555555', marginTop: '0.5rem' }}>Explore in-depth setup documentation, API references, and troubleshooting setups.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '3rem', alignItems: 'flex-start' }}>
-            {/* Sidebar navigation */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="docs-layout-grid">
+            <div className="docs-sidebar">
               {Object.keys(DOCS_DATA).map((key) => (
-                <button 
+                <button
                   key={key}
                   onClick={() => setActiveDocTab(key)}
                   className="neo-btn"
-                  style={{ 
+                  style={{
                     justifyContent: 'flex-start',
                     textAlign: 'left',
                     backgroundColor: activeDocTab === key ? 'var(--color-black)' : 'var(--color-white)',
@@ -591,7 +585,6 @@ export default function App() {
               ))}
             </div>
 
-            {/* Document display board */}
             <div className="neo-card" style={{ padding: '3rem', minHeight: '340px' }}>
               <div className="neo-box-accent" style={{ marginBottom: '1rem', background: 'var(--color-accent)' }}>
                 {DOCS_DATA[activeDocTab].title}
@@ -607,43 +600,43 @@ export default function App() {
         </div>
       </section>
 
-      {/* ===== CONTACT US ===== */}
+      {/* ===== CONTACT ===== */}
       <section className="section" id="contact" style={{ backgroundColor: 'var(--color-white)' }}>
         <div className="container">
           <div style={{ marginBottom: '4rem' }}>
             <div className="neo-box-accent" style={{ marginBottom: '1rem' }}>09. Contact Us</div>
             <h2 style={{ fontSize: '2.5rem' }}>Get in Touch</h2>
-            <p style={{ color: '#555555', marginTop: '0.5rem' }}>Have a question about a product, documentation, sponsorship, or partnership? Reach out — we typically respond within 24 business hours.</p>
+            <p style={{ color: '#555555', marginTop: '0.5rem' }}>Have a question about a product, documentation, sponsorship, or partnership? Reach out. We typically respond within 24 business hours.</p>
           </div>
 
           <div className="contact-layout-grid">
             <div className="contact-info-list">
               <div className="contact-info-card">
-                <div className="contact-icon-badge">✉</div>
+                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>GEN</div>
                 <div>
                   <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>General Inquiries</h4>
                   <strong>hello@dragotool.shop</strong>
                 </div>
               </div>
-              
+
               <div className="contact-info-card">
-                <div className="contact-icon-badge">🤝</div>
+                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>SPO</div>
                 <div>
-                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Sponsorship &amp; Partnerships</h4>
+                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Sponsorship and Partnerships</h4>
                   <strong>sponsors@dragotool.shop</strong>
                 </div>
               </div>
 
               <div className="contact-info-card">
-                <div className="contact-icon-badge">🔧</div>
+                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>SUP</div>
                 <div>
-                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Support &amp; Documentation</h4>
+                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Support and Documentation</h4>
                   <strong>support@dragotool.shop</strong>
                 </div>
               </div>
 
               <div className="contact-info-card">
-                <div className="contact-icon-badge">📍</div>
+                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>HQ</div>
                 <div>
                   <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>HQ Address</h4>
                   <strong>Remote-first, serving clients globally</strong>
@@ -654,13 +647,13 @@ export default function App() {
             <div>
               <div className="neo-card" style={{ padding: '3rem' }}>
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Send Us Your Requirements</h3>
-                
+
                 <form onSubmit={handleContactSubmit} className="form-group-wrap">
                   <div className="form-field-group">
                     <label className="form-field-label">Name</label>
-                    <input 
-                      type="text" 
-                      placeholder="Jane Doe" 
+                    <input
+                      type="text"
+                      placeholder="Jane Doe"
                       value={contactForm.name}
                       onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                       required
@@ -669,9 +662,9 @@ export default function App() {
 
                   <div className="form-field-group">
                     <label className="form-field-label">Email</label>
-                    <input 
-                      type="email" 
-                      placeholder="jane@example.com" 
+                    <input
+                      type="email"
+                      placeholder="jane@example.com"
                       value={contactForm.email}
                       onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                       required
@@ -680,21 +673,21 @@ export default function App() {
 
                   <div className="form-field-group">
                     <label className="form-field-label">Inquiry Type</label>
-                    <select 
+                    <select
                       value={contactForm.type}
                       onChange={(e) => setContactForm({ ...contactForm, type: e.target.value })}
                     >
                       <option value="">Select inquiry option</option>
                       <option value="General">General Inquiry</option>
-                      <option value="Sponsorship">Sponsorship &amp; Partnerships</option>
-                      <option value="Support">Support &amp; Documentation</option>
+                      <option value="Sponsorship">Sponsorship and Partnerships</option>
+                      <option value="Support">Support and Documentation</option>
                     </select>
                   </div>
 
                   <div className="form-field-group">
                     <label className="form-field-label">Message</label>
-                    <textarea 
-                      rows="4" 
+                    <textarea
+                      rows="4"
                       placeholder="Your requirements..."
                       value={contactForm.message}
                       onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
@@ -704,12 +697,12 @@ export default function App() {
 
                   <button type="submit" className="neo-btn neo-btn-black">Send Message</button>
                   {contactFeedback && (
-                    <div style={{ 
-                      marginTop: '1rem', 
-                      padding: '1rem', 
-                      background: contactFeedback.startsWith('Error') ? '#ffdddd' : '#ddffdd', 
+                    <div style={{
+                      marginTop: '1rem',
+                      padding: '1rem',
+                      background: contactFeedback.startsWith('Error') ? '#ffdddd' : '#ddffdd',
                       border: '2px solid #000',
-                      fontWeight: '700' 
+                      fontWeight: '700'
                     }}>
                       {contactFeedback}
                     </div>
@@ -733,7 +726,7 @@ export default function App() {
             <div>
               <a href="#" className="logo-wrap" style={{ color: '#fff', background: '#000', border: '2px solid #fff', marginBottom: '1.5rem' }}>
                 <div className="logo-badge" style={{ background: '#fff', color: '#000' }}>
-                  <DragozLogo size={20} color="#000000" />
+                  <DragozLogo size={20} />
                 </div>
                 <span>DRAGOZ</span>
               </a>
@@ -777,18 +770,18 @@ export default function App() {
               <span className="footer-col-title">Stay Updated</span>
               <p style={{ color: '#bbbbbb', fontSize: '0.85rem', marginBottom: '1rem' }}>Get updates on practitioner-built releases.</p>
               <form onSubmit={handleNewsletterSubmit} className="footer-newsletter-box">
-                <input 
-                  type="email" 
-                  className="newsletter-input-element" 
-                  placeholder="your@email.com" 
+                <input
+                  type="email"
+                  className="newsletter-input-element"
+                  placeholder="your@email.com"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  required 
+                  required
                 />
-                <button type="submit" className="neo-btn neo-btn-primary neo-btn-sm" style={{ padding: '0 1rem' }}>✓</button>
+                <button type="submit" className="neo-btn neo-btn-primary neo-btn-sm" style={{ padding: '0 1rem' }}>OK</button>
               </form>
               {newsletterFeedback && (
-                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#ff7b7b', fontWeight: 'bold' }}>
+                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#aaccaa', fontWeight: 'bold' }}>
                   {newsletterFeedback}
                 </div>
               )}
@@ -804,6 +797,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+
     </div>
   );
 }

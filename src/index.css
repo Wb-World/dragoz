@@ -7,7 +7,8 @@
   --color-card-bg: #ffffff;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-accent: #ff2d2d;
+  --color-accent: #1db954;
+  --color-green: #1db954;
   
   --border-thick: 3px solid #000000;
   --border-thin: 2px solid #000000;
@@ -175,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .neo-btn-primary:hover {
-  background-color: #ff4d4d;
+  background-color: #17a347;
 }
 
 .neo-btn-black {
@@ -338,9 +339,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50% !important;
   background-color: var(--color-white);
 }
-.visual-dot.red { background-color: var(--color-accent); }
+.visual-dot.red { background-color: #e55555; }
 .visual-dot.yellow { background-color: #f4d068; }
-.visual-dot.green { background-color: #2ec4b6; }
+.visual-dot.green { background-color: var(--color-accent); }
 
 .visual-title {
   font-family: monospace;
