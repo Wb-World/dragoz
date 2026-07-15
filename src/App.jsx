@@ -327,51 +327,69 @@ export default function App() {
 
           <div className="quicklinks-grid-wrap">
             <a href="#docs" onClick={() => setActiveDocTab('getting-started')} className="quicklink-item-card">
-              <div>
-                <h3 className="quicklink-title-text">Getting Started</h3>
-                <p style={{ color: '#555555', fontSize: '0.9rem' }}>Set up your first Dragoz tool in minutes.</p>
+              <div className="quicklink-header">
+                <span className="quicklink-category">DOCS</span>
+                <span className="quicklink-arrow">&rarr;</span>
               </div>
-              <span className="quicklink-arrow">&rarr;</span>
+              <div className="quicklink-body">
+                <h3 className="quicklink-title-text">Getting Started</h3>
+                <p className="quicklink-desc">Set up your first Dragoz tool in minutes.</p>
+              </div>
             </a>
 
             <a href="#pillars" className="quicklink-item-card">
-              <div>
-                <h3 className="quicklink-title-text">Product Catalog</h3>
-                <p style={{ color: '#555555', fontSize: '0.9rem' }}>Browse the full focus line.</p>
+              <div className="quicklink-header">
+                <span className="quicklink-category">PRODUCTS</span>
+                <span className="quicklink-arrow">&rarr;</span>
               </div>
-              <span className="quicklink-arrow">&rarr;</span>
+              <div className="quicklink-body">
+                <h3 className="quicklink-title-text">Product Focus</h3>
+                <p className="quicklink-desc">Browse our hardware, IoT, and security lines.</p>
+              </div>
             </a>
 
-            <a href="#community" className="quicklink-item-card">
-              <div>
+            <a href="#about" className="quicklink-item-card">
+              <div className="quicklink-header">
+                <span className="quicklink-category">COMMUNITY</span>
+                <span className="quicklink-arrow">&rarr;</span>
+              </div>
+              <div className="quicklink-body">
                 <h3 className="quicklink-title-text">Drago Community</h3>
-                <p style={{ color: '#555555', fontSize: '0.9rem' }}>Our nonprofit builder community.</p>
+                <p className="quicklink-desc">Our nonprofit developer and hacker forum.</p>
               </div>
-              <span className="quicklink-arrow">&rarr;</span>
             </a>
 
             <a href="#community" className="quicklink-item-card">
-              <div>
-                <h3 className="quicklink-title-text">Community and Sponsors</h3>
-                <p style={{ color: '#555555', fontSize: '0.9rem' }}>Cyber Voyage and partner network.</p>
+              <div className="quicklink-header">
+                <span className="quicklink-category">PARTNERS</span>
+                <span className="quicklink-arrow">&rarr;</span>
               </div>
-              <span className="quicklink-arrow">&rarr;</span>
+              <div className="quicklink-body">
+                <h3 className="quicklink-title-text">Sponsors & Partner Network</h3>
+                <p className="quicklink-desc">Explore sponsorships like Cyber Voyage.</p>
+              </div>
             </a>
 
             <a href="#story" className="quicklink-item-card">
-              <div>
-                <h3 className="quicklink-title-text">About Us</h3>
-                <p style={{ color: '#555555', fontSize: '0.9rem' }}>The story behind Dragoz.</p>
+              <div className="quicklink-header">
+                <span className="quicklink-category">ABOUT</span>
+                <span className="quicklink-arrow">&rarr;</span>
               </div>
-              <span className="quicklink-arrow">&rarr;</span>
+              <div className="quicklink-body">
+                <h3 className="quicklink-title-text">About Us</h3>
+                <p className="quicklink-desc">The story and values driving Secure Worldz.</p>
+              </div>
             </a>
 
             <a href="#contact" className="quicklink-item-card">
-              <div>
-                <h3 className="quicklink-title-text">Contact Us</h3>
-                <p style={{ color: '#555555', fontSize: '0.9rem' }}>Get in touch with the team.</p>
+              <div className="quicklink-header">
+                <span className="quicklink-category">CONTACT</span>
+                <span className="quicklink-arrow">&rarr;</span>
               </div>
-              <span className="quicklink-arrow">&rarr;</span>
+              <div className="quicklink-body">
+                <h3 className="quicklink-title-text">Contact Us</h3>
+                <p className="quicklink-desc">Send us your requirements or get support.</p>
+              </div>
             </a>
           </div>
         </div>
