@@ -74,58 +74,65 @@ const DOCS_DATA = {
     title: 'Getting Started',
     desc: 'Set up your first Dragoz tool in minutes.',
     content: (
-      <div style={{ fontFamily: 'monospace', fontSize: '0.9rem', lineHeight: '1.6' }}>
-        <p style={{ color: '#666666' }}># Clone the open-source repository</p>
-        <p><span style={{ color: 'var(--color-accent)' }}>$</span> git clone https://github.com/Secure-Worldz-Official/dragoz.git</p>
-        <p><span style={{ color: 'var(--color-accent)' }}>$</span> cd dragoz && npm install</p>
-        <p style={{ color: '#666666', marginTop: '1rem' }}># Initialize practitioner toolkit</p>
-        <p><span style={{ color: 'var(--color-accent)' }}>$</span> npm run dragoz:init</p>
-        <p style={{ color: 'var(--color-green)', marginTop: '0.5rem' }}>✓ System checked. Ready to defend real networks.</p>
+      <div>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+          Dragoz tools are designed for creators, engineers, and hobbyists. To get started, refer to our detailed setup configurations, transparent specifications, and community documentation.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+          Our main goal is to build real cybersecurity and AI-driven tech products, and make the knowledge behind them open to the community that helped shape them.
+        </p>
       </div>
     )
   },
   'product-guides': {
     title: 'Product Guides',
-    desc: 'Walkthroughs detailing the usage of IoT modules and cybersecurity tools.',
+    desc: 'Browse the full lineup and catalog guidelines.',
     content: (
       <div>
-        <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Vulnerability Assessment Protocol:</h4>
-        <p style={{ fontSize: '0.95rem', color: '#444444', marginBottom: '1rem' }}>Follow the standard checklist drawn from hands-on ethical hacking service experience:</p>
-        <ul style={{ listStyle: 'square', paddingLeft: '1.5rem', fontSize: '0.9rem', lineHeight: '1.6' }}>
-          <li>Identify host nodes using passive network scanning.</li>
-          <li>Map open ports and interface services.</li>
-          <li>Analyze system firmware versions against known exploit databases.</li>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+          Vetted walkthroughs and specifications are provided for every cybersecurity, artificial intelligence, and hardware tech product in our catalog.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+          Our main focus spans three core pillars:
+        </p>
+        <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem', lineHeight: '1.6', listStyle: 'square' }}>
+          <li>🔐 Cyber Security — tools, research, and practices.</li>
+          <li>🤖 Artificial Intelligence — practical AI tooling and automation.</li>
+          <li>🛠️ Tech Product Development — turning practitioner know-how into products.</li>
         </ul>
       </div>
     )
   },
   'api-reference': {
     title: 'API / Hardware Reference',
-    desc: 'Hardware pinouts, schemas, and API definitions.',
+    desc: 'API specifications and hardware schematics.',
     content: (
-      <div style={{ fontFamily: 'monospace', fontSize: '0.9rem', lineHeight: '1.6' }}>
-        <p style={{ fontWeight: 'bold', color: 'var(--color-accent)' }}>// Hardware PIN Mapping (Dragoz IoT Module V1)</p>
-        <p>PIN 01: VCC (3.3V power input)</p>
-        <p>PIN 02: GND (Ground channel)</p>
-        <p>PIN 03: TX (UART Serial Transmit)</p>
-        <p>PIN 04: RX (UART Serial Receive)</p>
-        <p style={{ color: '#666666', marginTop: '1rem' }}>// API Endpoint:</p>
-        <p>GET /api/v1/status &rarr; returns {`{"module": "active", "integrity": "clean"}`}</p>
+      <div>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+          Every product is engineered with cybersecurity best practices baked in, ensuring purpose-driven AI integration and transparent documentation.
+        </p>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
+          Please refer to the setup logs and specifications inside individual documentation folders for clear specifications, pin details, and interface options.
+        </p>
       </div>
     )
   },
   'troubleshooting': {
     title: 'Troubleshooting',
-    desc: 'Fixing common issues and debugging setup scripts.',
+    desc: 'Troubleshooting guides and docs issue logging.',
     content: (
       <div>
-        <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: 'var(--color-accent)' }}>Error: serial connection timeout</h4>
-        <p style={{ fontSize: '0.9rem', color: '#444444', marginBottom: '1rem' }}>This error occurs when the hardware serial interface cannot establish connection. Verify the steps below:</p>
-        <ol style={{ paddingLeft: '1.5rem', fontSize: '0.9rem', lineHeight: '1.6' }}>
-          <li>Ensure serial drivers are installed (CH340 / CP210X).</li>
-          <li>Check that the USB cable supports data sync protocols, not only power.</li>
-          <li>Run serial utility command with root privileges: <code>sudo chmod a+rw /dev/ttyUSB0</code>.</li>
-        </ol>
+        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+          Our documentation-first standard ensures you have clear setup guides and troubleshooting resources so you never have to guess how something works.
+        </p>
+        <div className="neo-card" style={{ padding: '1.5rem', background: 'var(--color-bg)' }}>
+          <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Need support or have questions?</h4>
+          <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>Get in touch with our security and engineering divisions. We respond within a few business hours.</p>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <a href="#contact" className="neo-btn neo-btn-sm">Report a Docs Issue</a>
+            <button onClick={() => alert('Call scheduling module loaded.')} className="neo-btn neo-btn-sm neo-btn-primary">Schedule a Call</button>
+          </div>
+        </div>
       </div>
     )
   }
@@ -462,7 +469,9 @@ export default function App() {
           <h2 style={{ fontSize: '3rem', marginBottom: '3rem' }}>Meet Our Founder</h2>
 
           <div className="founder-layout-card">
-            <div className="founder-avatar-box">JL</div>
+            <div className="founder-img-wrapper">
+              <img src="/jai.png" alt="Jaiganesh Lakshmanan" className="founder-img" />
+            </div>
             <div>
               <h3 style={{ fontSize: '2rem', marginBottom: '0.25rem' }}>Jaiganesh Lakshmanan</h3>
               <p style={{ color: 'var(--color-accent)', fontWeight: '800', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
