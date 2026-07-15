@@ -258,7 +258,10 @@ export default function App() {
               <div className="neo-box-accent" style={{ marginBottom: '1.25rem' }}>01. Overview</div>
               <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>What is Dragoz?</h2>
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333', marginBottom: '1.5rem' }}>
-                Dragoz is the product and documentation home for tools designed by practitioners, for practitioners. Every product listed here has been built, tested, and refined by people working hands-on in cybersecurity, AI, and hardware engineering. Not marketing teams guessing what creators need.
+                Dragoz is a marketplace and documentation hub for tools built by practitioners, for practitioners. Every product featured here is designed, tested, and refined by people working hands-on in cybersecurity, AI, and hardware engineering — not by marketing teams guessing what builders need.
+              </p>
+              <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333', marginBottom: '1.5rem' }}>
+                Beyond a platform, Dragoz is focused on product development and student growth, helping creators and learners build real world solutions and gain practical experience through technology.
               </p>
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333' }}>
                 Dragoz is proudly powered by <strong>Secure Worldz</strong>, a multi-domain tech and security company offering cybersecurity services, web and app development, AI development, and training through Proworldz Academy.
@@ -512,9 +515,9 @@ export default function App() {
               </div>
 
               <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-                <a href="#" className="neo-btn neo-btn-sm neo-btn-primary">View Founder Portfolio</a>
-                <a href="#" className="neo-btn neo-btn-sm">Connect on Instagram</a>
-                <a href="#" className="neo-btn neo-btn-sm neo-btn-black">Connect on YouTube</a>
+                <a href="https://www.cyberjai.co.in/" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-primary">View Founder Portfolio</a>
+                <a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm">Connect on Instagram</a>
+                <a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-black">Connect on YouTube</a>
               </div>
             </div>
           </div>
@@ -770,9 +773,17 @@ export default function App() {
                   )}
                 </form>
 
-                <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2.5rem', borderTop: 'var(--border-thin)', paddingTop: '1.5rem' }}>
-                  <button onClick={() => alert('Call scheduling module loaded.')} className="neo-btn neo-btn-sm">Schedule a Call</button>
-                  <button onClick={() => alert('Docs issue ticket generated.')} className="neo-btn neo-btn-sm neo-btn-primary">Report a Docs Issue</button>
+                <div style={{ marginTop: '2.5rem', borderTop: 'var(--border-thin)', paddingTop: '1.5rem' }}>
+                  <h4 style={{ fontSize: '1rem', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Find Us Online</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                    <a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>▶ YouTube — @TheCyberJai</a>
+                    <a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>📸 Instagram — @thecyberjai</a>
+                    <a href="https://www.cyberjai.co.in/" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>🌐 Founder Portfolio — cyberjai.co.in</a>
+                    <a href="https://www.youtube.com/@cyber_voyage" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>▶ Cyber Voyage — YouTube</a>
+                    <a href="https://x.com/Dragothetool" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>𝕏 X — @Dragothetool</a>
+                    <a href="https://chat.whatsapp.com/JmtUdMv4rdN6j9uQeXrnLN" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-primary" style={{ justifyContent: 'flex-start' }}>💬 WhatsApp Channel</a>
+                    <a href="https://discord.gg/YMDG4xBYmp" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-black" style={{ justifyContent: 'flex-start' }}>Discord Community</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -820,9 +831,12 @@ export default function App() {
             <div>
               <span className="footer-col-title">Follow Us</span>
               <ul className="footer-links-list">
-                <li><a href="#" className="footer-link-item">Instagram</a></li>
-                <li><a href="#" className="footer-link-item">YouTube</a></li>
-                <li><a href="#" className="footer-link-item">WhatsApp Channel</a></li>
+                <li><a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" className="footer-link-item">YouTube</a></li>
+                <li><a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" className="footer-link-item">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@cyber_voyage" target="_blank" rel="noopener noreferrer" className="footer-link-item">Cyber Voyage</a></li>
+                <li><a href="https://x.com/Dragothetool" target="_blank" rel="noopener noreferrer" className="footer-link-item">X (Twitter)</a></li>
+                <li><a href="https://chat.whatsapp.com/JmtUdMv4rdN6j9uQeXrnLN" target="_blank" rel="noopener noreferrer" className="footer-link-item">WhatsApp Channel</a></li>
+                <li><a href="https://discord.gg/YMDG4xBYmp" target="_blank" rel="noopener noreferrer" className="footer-link-item">Discord</a></li>
                 <li><a href="https://secureworldz.pro/" target="_blank" rel="noopener noreferrer" className="footer-link-item">Secure Worldz</a></li>
               </ul>
             </div>
