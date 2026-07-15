@@ -514,21 +514,29 @@ export default function App() {
             </p>
           </div>
 
-          {/* Cyber Voyage sponsor — full width, prominent */}
-          <div className="neo-card" style={{ padding: '3.5rem', marginBottom: '3rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '3rem', alignItems: 'center' }}>
+          {/* Cyber Voyage — featured sponsor card (mirrors founder layout) */}
+          <div className="neo-card" style={{ padding: '3.5rem', marginBottom: '3.5rem' }}>
+            <div className="sponsor-feature-layout">
+              {/* Logo image block — styled exactly like founder-img-wrapper */}
+              <div className="sponsor-logo-wrapper">
+                <img
+                  src="/cyber-voyage.png"
+                  alt="Cyber Voyage"
+                  className="sponsor-logo-img"
+                />
+              </div>
+
+              {/* Content block */}
               <div>
                 <div className="neo-box-accent" style={{ marginBottom: '1.25rem' }}>Community Sponsor</div>
-                <h3 style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>Cyber Voyage</h3>
-                <p style={{ color: 'var(--color-accent)', fontWeight: '800', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+                <h3 style={{ fontSize: '2.25rem', marginBottom: '0.35rem' }}>Cyber Voyage</h3>
+                <p style={{ color: 'var(--color-accent)', fontWeight: '800', textTransform: 'uppercase', fontSize: '0.88rem', marginBottom: '1.75rem' }}>
                   Official Community Sponsor of Dragoz
                 </p>
-              </div>
-              <div>
                 <p style={{ color: '#333333', lineHeight: '1.7', fontSize: '1.05rem', marginBottom: '1.5rem' }}>
                   Cyber Voyage is a proud community sponsor of Dragoz, supporting our mission to bring practitioner-built tools and documentation to creators and security enthusiasts worldwide.
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '2rem' }}>
                   <div style={{ borderLeft: '4px solid var(--color-accent)', paddingLeft: '1rem' }}>
                     <strong>Partnership focus:</strong> cybersecurity content collaboration, CTF challenges, and community events
                   </div>
@@ -537,6 +545,41 @@ export default function App() {
                   </div>
                 </div>
                 <a href="#contact" className="neo-btn neo-btn-primary">Connect with Cyber Voyage</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Powered by Secure Worldz card */}
+          <div className="neo-card" style={{ padding: '3.5rem', marginBottom: '3.5rem' }}>
+            <div className="sponsor-feature-layout">
+              {/* SWZ Logo */}
+              <div className="sponsor-logo-wrapper">
+                <img
+                  src="/swz.png"
+                  alt="Secure Worldz"
+                  className="sponsor-logo-img"
+                />
+              </div>
+
+              {/* Content block */}
+              <div>
+                <div className="neo-box-accent" style={{ marginBottom: '1.25rem' }}>Powered By</div>
+                <h3 style={{ fontSize: '2.25rem', marginBottom: '0.35rem' }}>Secure Worldz</h3>
+                <p style={{ color: 'var(--color-accent)', fontWeight: '800', textTransform: 'uppercase', fontSize: '0.88rem', marginBottom: '1.75rem' }}>
+                  Parent Company and Technology Backbone of Dragoz
+                </p>
+                <p style={{ color: '#333333', lineHeight: '1.7', fontSize: '1.05rem', marginBottom: '1.5rem' }}>
+                  Secure Worldz is the multi-domain tech and security company behind Dragoz. Offering cybersecurity services, web and app development, AI development, and professional training through Proworldz Academy.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '2rem' }}>
+                  <div style={{ borderLeft: '4px solid var(--color-accent)', paddingLeft: '1rem' }}>
+                    <strong>Core services:</strong> cybersecurity, AI development, web and app development, training
+                  </div>
+                  <div style={{ borderLeft: '4px solid var(--color-black)', paddingLeft: '1rem' }}>
+                    <strong>Flagship division:</strong> Proworldz Academy, a practitioner-led training and certification platform
+                  </div>
+                </div>
+                <a href="https://secureworldz.pro/" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-black">Visit Secure Worldz</a>
               </div>
             </div>
           </div>
