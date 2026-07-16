@@ -95,7 +95,7 @@ The **Drago Community** is the nonprofit, open-source arm behind Dragoz. It exis
 
 **Founder & CEO, Secure Worldz | Founder, Drago & Proworldz**
 
-With over 10 years of experience in technology and cybersecurity, Jaiganesh Lakshmanan has worked with Fortune 10+ companies to strengthen their security infrastructure. He is the founder of both **Drago** (the Dragoz product line) and **Proworldz Academy**, and has personally trained over 1,000 students across cybersecurity, ethical hacking, AI development, and business growth.
+With over 6 years of experience in technology and cybersecurity, Jaiganesh Lakshmanan has worked with Fortune 10+ companies to strengthen their security infrastructure. He is the founder of both **Drago** (the Dragoz product line) and **Proworldz Academy**, and has personally trained over 1,000 students across cybersecurity, ethical hacking, AI development, and business growth.
 
 Jaiganesh specializes in vulnerability assessment and penetration testing, having discovered critical security flaws in major financial institutions. He's also a technology speaker, ethical hacker, AI developer, and business growth speaker.
 
