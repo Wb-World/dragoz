@@ -57,6 +57,98 @@ const WHAT_WE_DO = [
   { title: 'Open Source and Nonprofit Community', desc: 'The Drago Community operates as a nonprofit, open-source initiative, giving builders free access to tools, research, and collaboration space.' }
 ];
 
+
+const TERMINAL_LOG = [
+  { tone: 'muted', text: '# Initializing Dragoz environment...' },
+  { tone: 'command', text: '$ dragoz init practitioner' },
+  { tone: 'ok', text: '[OK] Loaded Cybersecurity toolkits' },
+  { tone: 'ok', text: '[OK] Loaded Practical AI configurations' },
+  { tone: 'ok', text: '[OK] Loaded IoT Hardware definitions' },
+  { tone: 'event', text: '[EVENT] Ready to append event entries.' }
+];
+
+const SOCIAL_LINKS = [
+  {
+    label: 'YouTube - @TheCyberJai',
+    url: 'https://www.youtube.com/@TheCyberJai',
+    className: 'social-btn-youtube',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
+        <path d="M10 9.5 15 12l-5 2.5z" fill="currentColor" />
+      </svg>
+    )
+  },
+  {
+    label: 'Instagram - @thecyberjai',
+    url: 'https://www.instagram.com/thecyberjai',
+    className: 'social-btn-instagram',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="16.5" cy="7.5" r="1.2" fill="currentColor" />
+      </svg>
+    )
+  },
+  {
+    label: 'Founder Portfolio - cyberjai.co.in',
+    url: 'https://www.cyberjai.co.in/',
+    className: 'social-btn-portfolio',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 6h6a2 2 0 0 1 2 2v1h2a1 1 0 0 1 1 1v2H4v-2a1 1 0 0 1 1-1h2V8a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M4 12v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M10 10V8h4v2" fill="none" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    )
+  },
+  {
+    label: 'Cyber Voyage - YouTube',
+    url: 'https://www.youtube.com/@cyber_voyage',
+    className: 'social-btn-youtube',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
+        <path d="M10 9.5 15 12l-5 2.5z" fill="currentColor" />
+      </svg>
+    )
+  },
+  {
+    label: 'X - @Dragothetool',
+    url: 'https://x.com/Dragothetool',
+    className: 'social-btn-x',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M5 5h3.5l3.5 4.5L15.5 5H19l-5.6 7.1L19.5 19H16l-4-5.1L8 19H4.5l5.8-7.4L5 5Z" fill="currentColor" />
+      </svg>
+    )
+  },
+  {
+    label: 'WhatsApp Channel',
+    url: 'https://chat.whatsapp.com/JmtUdMv4rdN6j9uQeXrnLN',
+    className: 'social-btn-whatsapp',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 4.5a7.5 7.5 0 0 0-6.3 11.6L5 20l3.9-1.1A7.5 7.5 0 1 0 12 4.5Z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M9.7 8.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.3.1.6-.1.8l-.5.6c.8 1.3 1.8 2.3 3.1 3.1l.6-.5c.2-.2.5-.2.8-.1l1.8.8c.3.1.4.3.4.5v.5c0 .2-.1.5-.4.7-.5.4-1.1.5-1.8.4-3.7-.6-6.8-3.7-7.4-7.4-.1-.7 0-1.3.4-1.8Z" fill="currentColor" />
+      </svg>
+    )
+  },
+  {
+    label: 'Discord Community',
+    url: 'https://discord.gg/YMDG4xBYmp',
+    className: 'social-btn-discord',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M7 7.5c2-.9 3.7-1.4 5-1.4s3 .5 5 1.4l1.5 8.4c.1.6-.2 1.1-.8 1.3-.5.1-1.1-.1-1.4-.5l-1.1-1.4H8.8l-1.1 1.4c-.3.4-.9.6-1.4.5-.6-.2-.9-.7-.8-1.3L7 7.5Z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <circle cx="10.1" cy="11.5" r="1" fill="currentColor" />
+        <circle cx="13.9" cy="11.5" r="1" fill="currentColor" />
+      </svg>
+    )
+  }
+];
+
 const VALUES = [
   { name: 'Practitioner-Led', definition: 'Built by people who use the tools themselves, not just sell them.' },
   { name: 'Transparency', definition: 'Clear specs, clear pricing, clear documentation. No surprises.' },
@@ -65,79 +157,8 @@ const VALUES = [
   { name: 'AI with Purpose', definition: 'AI is applied where it genuinely saves time or improves security. Not bolted on for buzz.' }
 ];
 
-const DOCS_DATA = {
-  'getting-started': {
-    title: 'Getting Started',
-    desc: 'Set up your first Dragoz tool in minutes.',
-    content: (
-      <div>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-          Dragoz tools are designed for creators, engineers, and hobbyists. To get started, refer to our detailed setup configurations, transparent specifications, and community documentation.
-        </p>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
-          Our main goal is to build real cybersecurity and AI-driven tech products, and make the knowledge behind them open to the community that helped shape them.
-        </p>
-      </div>
-    )
-  },
-  'product-guides': {
-    title: 'Product Guides',
-    desc: 'Browse the full lineup and catalog guidelines.',
-    content: (
-      <div>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-          Vetted walkthroughs and specifications are provided for every cybersecurity, artificial intelligence, and hardware tech product in our catalog.
-        </p>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>Our main focus spans four core pillars:</p>
-        <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem', lineHeight: '1.8', listStyle: 'disc' }}>
-          <li>Cyber Security: tools, research, and practices.</li>
-          <li>Artificial Intelligence: practical AI tooling and automation.</li>
-          <li>Tech Product Development: turning practitioner know-how into products.</li>
-          <li>IoT Hardware: embedded gadgets tested in real environments.</li>
-        </ul>
-      </div>
-    )
-  },
-  'api-reference': {
-    title: 'API and Hardware Reference',
-    desc: 'API specifications and hardware schematics.',
-    content: (
-      <div>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-          Every product is engineered with cybersecurity best practices baked in, ensuring purpose-driven AI integration and transparent documentation.
-        </p>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
-          Please refer to the setup logs and specifications inside individual documentation folders for clear specifications, pin details, and interface options.
-        </p>
-      </div>
-    )
-  },
-  'troubleshooting': {
-    title: 'Troubleshooting',
-    desc: 'Troubleshooting guides and docs issue logging.',
-    content: (
-      <div>
-        <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-          Our documentation-first standard ensures you have clear setup guides and troubleshooting resources so you never have to guess how something works.
-        </p>
-        <div style={{ border: '2px solid #000', padding: '1.5rem', background: 'var(--color-bg)' }}>
-          <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Need support or have questions?</h4>
-          <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>Get in touch with our security and engineering divisions. We respond within a few business hours.</p>
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="#contact" className="neo-btn neo-btn-sm">Report a Docs Issue</a>
-            <button onClick={() => alert('Call scheduling module loaded.')} className="neo-btn neo-btn-sm neo-btn-primary">Schedule a Call</button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-};
-
-// ── COMPONENT ─────────────────────────────────────────────────────────────────
-
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDocTab, setActiveDocTab] = useState('getting-started');
   const [contactForm, setContactForm] = useState({ name: '', email: '', type: '', message: '' });
   const [contactFeedback, setContactFeedback] = useState('');
   const [newsletterEmail, setNewsletterEmail] = useState('');
@@ -145,10 +166,15 @@ export default function App() {
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    if (!contactForm.name || !contactForm.email || !contactForm.message) {
+    const sanitizedName = contactForm.name.trim();
+    const sanitizedEmail = contactForm.email.trim();
+    const sanitizedMessage = contactForm.message.trim();
+
+    if (!sanitizedName || !sanitizedEmail || !sanitizedMessage) {
       setContactFeedback('Error: All required fields must be filled out.');
       return;
     }
+
     setContactFeedback('Submitting requirements...');
     setTimeout(() => {
       setContactFeedback('Your inquiry has been sent to Secure Worldz. We respond within 24 business hours.');
@@ -158,7 +184,10 @@ export default function App() {
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    if (!newsletterEmail) return;
+    const sanitizedEmail = newsletterEmail.trim();
+
+    if (!sanitizedEmail) return;
+
     setNewsletterFeedback('Subscribing...');
     setTimeout(() => {
       setNewsletterFeedback('Welcome to Dragoz updates!');
@@ -184,7 +213,6 @@ export default function App() {
             <a href="#pillars" className="nav-link">Our Focus</a>
             <a href="#story" className="nav-link">Story</a>
             <a href="#founder" className="nav-link">Founder</a>
-            <a href="#docs" className="nav-link">Docs</a>
             <a href="#community" className="nav-link">Sponsors</a>
             <a href="#contact" className="nav-link">Contact</a>
             <a href="https://dragotool.shop/" className="neo-btn neo-btn-sm neo-btn-primary">BUY</a>
@@ -222,7 +250,7 @@ export default function App() {
 
             <div className="hero-ctas">
               <a href="#pillars" className="neo-btn neo-btn-primary">Explore Products</a>
-              <a href="#docs" className="neo-btn">Read the Docs</a>
+              <a href="#community" className="neo-btn">Join Community</a>
               <a href="#founder" className="neo-btn neo-btn-black">Meet Our Founder</a>
             </div>
           </div>
@@ -237,13 +265,21 @@ export default function App() {
                 </div>
                 <div className="visual-title">dragoz terminal</div>
               </div>
-              <div style={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: '1.8', color: 'var(--color-black)' }}>
-                <p style={{ color: '#666666' }}># Initializing Dragoz environment...</p>
-                <p><span style={{ color: 'var(--color-accent)' }}>$</span> dragoz init practitioner</p>
-                <p style={{ color: 'var(--color-accent)' }}>[OK] Loaded Cybersecurity toolkits</p>
-                <p style={{ color: 'var(--color-accent)' }}>[OK] Loaded Practical AI configurations</p>
-                <p style={{ color: 'var(--color-accent)' }}>[OK] Loaded IoT Hardware definitions</p>
-                <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>[STATUS] Built by engineers. Ready.</p>
+                            <div style={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: '1.8', color: 'var(--color-black)', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                {TERMINAL_LOG.map((entry, index) => (
+                  <p
+                    key={index}
+                    style={{
+                      margin: 0,
+                      marginTop: entry.tone === 'event' ? '1rem' : 0,
+                      color: entry.tone === 'muted' ? '#666666' : entry.tone === 'event' ? '#111111' : 'var(--color-accent)',
+                      fontWeight: entry.tone === 'event' ? '800' : entry.tone === 'command' ? '700' : '400',
+                      wordBreak: 'break-word'
+                    }}
+                  >
+                    {entry.text}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
@@ -329,14 +365,14 @@ export default function App() {
           </div>
 
           <div className="quicklinks-grid-wrap">
-            <a href="#docs" onClick={() => setActiveDocTab('getting-started')} className="quicklink-item-card">
+            <a href="#community" className="quicklink-item-card">
               <div className="quicklink-header">
-                <span className="quicklink-category">DOCS</span>
+                <span className="quicklink-category">COMMUNITY</span>
                 <span className="quicklink-arrow">&rarr;</span>
               </div>
               <div className="quicklink-body">
-                <h3 className="quicklink-title-text">Getting Started</h3>
-                <p className="quicklink-desc">Set up your first Dragoz tool in minutes.</p>
+                <h3 className="quicklink-title-text">Open Source</h3>
+                <p className="quicklink-desc">Explore the Drago community, sponsors, and events.</p>
               </div>
             </a>
 
@@ -493,7 +529,7 @@ export default function App() {
               </p>
 
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333' }}>
-                With over 10 years of experience in technology and cybersecurity, Jaiganesh Lakshmanan has worked with Fortune 10+ companies to strengthen their security infrastructure. He is the founder of both <strong>Drago</strong> (the Dragoz product line) and <strong>Proworldz Academy</strong>, and has personally trained over 1,000 students across cybersecurity, ethical hacking, AI development, and business growth.
+                With over 6 years of experience in technology and cybersecurity, Jaiganesh Lakshmanan has worked with Fortune 10+ companies to strengthen their security infrastructure. He is the founder of both <strong>Drago</strong> (the Dragoz product line) and <strong>Proworldz Academy</strong>, and has personally trained over 1,000 students across cybersecurity, ethical hacking, AI development, and business growth.
               </p>
 
               <p style={{ fontSize: '1.15rem', lineHeight: '1.6', color: '#333333', marginTop: '1rem' }}>
@@ -515,9 +551,9 @@ export default function App() {
               </div>
 
               <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-                <a href="https://www.cyberjai.co.in/" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-primary">View Founder Portfolio</a>
-                <a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm">Connect on Instagram</a>
-                <a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-black">Connect on YouTube</a>
+                <a href="https://www.cyberjai.co.in/" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="neo-btn neo-btn-sm neo-btn-primary">View Founder Portfolio</a>
+                <a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="neo-btn neo-btn-sm">Connect on Instagram</a>
+                <a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="neo-btn neo-btn-sm neo-btn-black">Connect on YouTube</a>
               </div>
             </div>
           </div>
@@ -600,7 +636,7 @@ export default function App() {
                     <strong>Flagship division:</strong> Proworldz Academy, a practitioner-led training and certification platform
                   </div>
                 </div>
-                <a href="https://secureworldz.pro/" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-black">Visit Secure Worldz</a>
+                <a href="https://secureworldz.pro/" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="neo-btn neo-btn-black">Visit Secure Worldz</a>
               </div>
             </div>
           </div>
@@ -619,173 +655,149 @@ export default function App() {
         </div>
       </section>
 
-      {/* ===== DOCS ===== */}
-      <section className="section" id="docs" style={{ backgroundColor: 'var(--color-bg)' }}>
-        <div className="container">
-          <div style={{ marginBottom: '4rem' }}>
-            <div className="neo-box-accent" style={{ marginBottom: '1rem' }}>08. Documentation</div>
-            <h2 style={{ fontSize: '2.5rem' }}>Developer Guides and References</h2>
-            <p style={{ color: '#555555', marginTop: '0.5rem' }}>Explore in-depth setup documentation, API references, and troubleshooting setups.</p>
-          </div>
-
-          <div className="docs-layout-grid">
-            <div className="docs-sidebar">
-              {Object.keys(DOCS_DATA).map((key) => (
-                <button
-                  key={key}
-                  onClick={() => setActiveDocTab(key)}
-                  className="neo-btn"
-                  style={{
-                    justifyContent: 'flex-start',
-                    textAlign: 'left',
-                    backgroundColor: activeDocTab === key ? 'var(--color-black)' : 'var(--color-white)',
-                    color: activeDocTab === key ? 'var(--color-white)' : 'var(--color-black)',
-                    boxShadow: activeDocTab === key ? 'none' : 'var(--shadow-flat-small)',
-                    transform: activeDocTab === key ? 'translate(2px, 2px)' : 'none'
-                  }}
-                >
-                  {DOCS_DATA[key].title}
-                </button>
-              ))}
-            </div>
-
-            <div className="neo-card" style={{ padding: '3rem', minHeight: '340px' }}>
-              <div className="neo-box-accent" style={{ marginBottom: '1rem', background: 'var(--color-accent)' }}>
-                {DOCS_DATA[activeDocTab].title}
-              </div>
-              <p style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '2rem' }}>
-                {DOCS_DATA[activeDocTab].desc}
-              </p>
-              <div style={{ borderTop: 'var(--border-thin)', paddingTop: '2rem' }}>
-                {DOCS_DATA[activeDocTab].content}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ===== CONTACT ===== */}
       <section className="section" id="contact" style={{ backgroundColor: 'var(--color-white)' }}>
         <div className="container">
           <div style={{ marginBottom: '4rem' }}>
-            <div className="neo-box-accent" style={{ marginBottom: '1rem' }}>09. Contact Us</div>
+            <div className="neo-box-accent" style={{ marginBottom: '1rem' }}>08. Contact Us</div>
             <h2 style={{ fontSize: '2.5rem' }}>Get in Touch</h2>
-            <p style={{ color: '#555555', marginTop: '0.5rem' }}>Have a question about a product, documentation, sponsorship, or partnership? Reach out. We typically respond within 24 business hours.</p>
+            <p style={{ color: '#555555', marginTop: '0.5rem' }}>Have a question about a product, support, sponsorship, or partnership? Reach out. We typically respond within 24 business hours.</p>
           </div>
 
           <div className="contact-layout-grid">
-            <div className="contact-info-list">
-              <div className="contact-info-card">
-                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>GEN</div>
-                <div>
-                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>General Inquiries</h4>
-                  <strong>hello@dragotool.shop</strong>
+            <div className="contact-left-col">
+              <div className="contact-info-list">
+                <div className="contact-info-card">
+                  <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>GEN</div>
+                  <div>
+                    <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>General Inquiries</h4>
+                    <strong>hello@dragotool.shop</strong>
+                  </div>
+                </div>
+
+                <div className="contact-info-card">
+                  <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>SPO</div>
+                  <div>
+                    <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Sponsorship and Partnerships</h4>
+                    <strong>sponsors@dragotool.shop</strong>
+                  </div>
+                </div>
+
+                <div className="contact-info-card">
+                  <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>SUP</div>
+                  <div>
+                    <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Support and Documentation</h4>
+                    <strong>support@dragotool.shop</strong>
+                  </div>
+                </div>
+
+                <div className="contact-info-card">
+                  <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>HQ</div>
+                  <div>
+                    <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>HQ Address</h4>
+                    <strong>Remote-first, serving clients globally</strong>
+                  </div>
                 </div>
               </div>
 
-              <div className="contact-info-card">
-                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>SPO</div>
-                <div>
-                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Sponsorship and Partnerships</h4>
-                  <strong>sponsors@dragotool.shop</strong>
-                </div>
-              </div>
-
-              <div className="contact-info-card">
-                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>SUP</div>
-                <div>
-                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>Support and Documentation</h4>
-                  <strong>support@dragotool.shop</strong>
-                </div>
-              </div>
-
-              <div className="contact-info-card">
-                <div className="contact-icon-badge" style={{ fontSize: '1rem', fontWeight: '800' }}>HQ</div>
-                <div>
-                  <h4 style={{ fontSize: '0.8rem', color: '#666666', textTransform: 'uppercase' }}>HQ Address</h4>
-                  <strong>Remote-first, serving clients globally</strong>
+              <div className="find-us-box">
+                <h4 className="find-us-title">Find Us Online</h4>
+                <div className="social-icons-grid">
+                  {SOCIAL_LINKS.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      referrerPolicy="no-referrer"
+                      className={'social-icon-btn ' + link.className}
+                      aria-label={link.label}
+                      title={link.label}
+                    >
+                      <span className="social-icon-svg">{link.icon}</span>
+                      <span className="social-icon-label">{link.label}</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <div>
-              <div className="neo-card" style={{ padding: '3rem' }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Send Us Your Requirements</h3>
+            <div className="neo-card" style={{ padding: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Send Us Your Requirements</h3>
 
-                <form onSubmit={handleContactSubmit} className="form-group-wrap">
-                  <div className="form-field-group">
-                    <label className="form-field-label">Name</label>
-                    <input
-                      type="text"
-                      placeholder="Jane Doe"
-                      value={contactForm.name}
-                      onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                      required
-                    />
-                  </div>
+              <form onSubmit={handleContactSubmit} className="form-group-wrap">
+                <div className="form-field-group">
+                  <label className="form-field-label" htmlFor="contact-name">Name <span aria-hidden="true">*</span></label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    placeholder="Jane Doe"
+                    value={contactForm.name}
+                    onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                    required
+                    maxLength={100}
+                    autoComplete="name"
+                  />
+                </div>
 
-                  <div className="form-field-group">
-                    <label className="form-field-label">Email</label>
-                    <input
-                      type="email"
-                      placeholder="jane@example.com"
-                      value={contactForm.email}
-                      onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                      required
-                    />
-                  </div>
+                <div className="form-field-group">
+                  <label className="form-field-label" htmlFor="contact-email">Email <span aria-hidden="true">*</span></label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    placeholder="jane@example.com"
+                    value={contactForm.email}
+                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                    required
+                    maxLength={254}
+                    autoComplete="email"
+                  />
+                </div>
 
-                  <div className="form-field-group">
-                    <label className="form-field-label">Inquiry Type</label>
-                    <select
-                      value={contactForm.type}
-                      onChange={(e) => setContactForm({ ...contactForm, type: e.target.value })}
-                    >
-                      <option value="">Select inquiry option</option>
-                      <option value="General">General Inquiry</option>
-                      <option value="Sponsorship">Sponsorship and Partnerships</option>
-                      <option value="Support">Support and Documentation</option>
-                    </select>
-                  </div>
+                <div className="form-field-group">
+                  <label className="form-field-label" htmlFor="contact-type">Inquiry Type</label>
+                  <select
+                    id="contact-type"
+                    value={contactForm.type}
+                    onChange={(e) => setContactForm({ ...contactForm, type: e.target.value })}
+                  >
+                    <option value="">Select inquiry option</option>
+                    <option value="General">General Inquiry</option>
+                    <option value="Sponsorship">Sponsorship and Partnerships</option>
+                    <option value="Support">Support and Documentation</option>
+                  </select>
+                </div>
 
-                  <div className="form-field-group">
-                    <label className="form-field-label">Message</label>
-                    <textarea
-                      rows="4"
-                      placeholder="Your requirements..."
-                      value={contactForm.message}
-                      onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                      required
-                    />
-                  </div>
+                <div className="form-field-group">
+                  <label className="form-field-label" htmlFor="contact-message">Message <span aria-hidden="true">*</span></label>
+                  <textarea
+                    id="contact-message"
+                    rows="5"
+                    placeholder="Your requirements..."
+                    value={contactForm.message}
+                    onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                    required
+                    maxLength={2000}
+                  />
+                </div>
 
-                  <button type="submit" className="neo-btn neo-btn-black">Send Message</button>
-                  {contactFeedback && (
-                    <div style={{
+                <button type="submit" className="neo-btn neo-btn-black">Send Message</button>
+                {contactFeedback && (
+                  <div
+                    role="alert"
+                    aria-live="polite"
+                    style={{
                       marginTop: '1rem',
                       padding: '1rem',
                       background: contactFeedback.startsWith('Error') ? '#ffdddd' : '#ddffdd',
                       border: '2px solid #000',
                       fontWeight: '700'
-                    }}>
-                      {contactFeedback}
-                    </div>
-                  )}
-                </form>
-
-                <div style={{ marginTop: '2.5rem', borderTop: 'var(--border-thin)', paddingTop: '1.5rem' }}>
-                  <h4 style={{ fontSize: '1rem', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Find Us Online</h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                    <a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>▶ YouTube — @TheCyberJai</a>
-                    <a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>📸 Instagram — @thecyberjai</a>
-                    <a href="https://www.cyberjai.co.in/" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>🌐 Founder Portfolio — cyberjai.co.in</a>
-                    <a href="https://www.youtube.com/@cyber_voyage" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>▶ Cyber Voyage — YouTube</a>
-                    <a href="https://x.com/Dragothetool" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm" style={{ justifyContent: 'flex-start' }}>𝕏 X — @Dragothetool</a>
-                    <a href="https://chat.whatsapp.com/JmtUdMv4rdN6j9uQeXrnLN" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-primary" style={{ justifyContent: 'flex-start' }}>💬 WhatsApp Channel</a>
-                    <a href="https://discord.gg/YMDG4xBYmp" target="_blank" rel="noopener noreferrer" className="neo-btn neo-btn-sm neo-btn-black" style={{ justifyContent: 'flex-start' }}>Discord Community</a>
+                    }}
+                  >
+                    {contactFeedback}
                   </div>
-                </div>
-              </div>
+                )}
+              </form>
             </div>
           </div>
         </div>
@@ -821,23 +833,23 @@ export default function App() {
             <div>
               <span className="footer-col-title">Quick Links</span>
               <ul className="footer-links-list">
-                <li><a href="#hero" className="footer-link-item">Getting Started</a></li>
-                <li><a href="#docs" className="footer-link-item">Product Catalog</a></li>
-                <li><a href="#community" className="footer-link-item">Drago Open Source</a></li>
-                <li><a href="#community" className="footer-link-item">Become a Sponsor</a></li>
+                <li><a href="#hero" className="footer-link-item">Home</a></li>
+                <li><a href="#about" className="footer-link-item">About Us</a></li>
+                <li><a href="#community" className="footer-link-item">Open Source</a></li>
+                <li><a href="#contact" className="footer-link-item">Contact</a></li>
               </ul>
             </div>
 
             <div>
               <span className="footer-col-title">Follow Us</span>
               <ul className="footer-links-list">
-                <li><a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" className="footer-link-item">YouTube</a></li>
-                <li><a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" className="footer-link-item">Instagram</a></li>
-                <li><a href="https://www.youtube.com/@cyber_voyage" target="_blank" rel="noopener noreferrer" className="footer-link-item">Cyber Voyage</a></li>
-                <li><a href="https://x.com/Dragothetool" target="_blank" rel="noopener noreferrer" className="footer-link-item">X (Twitter)</a></li>
-                <li><a href="https://chat.whatsapp.com/JmtUdMv4rdN6j9uQeXrnLN" target="_blank" rel="noopener noreferrer" className="footer-link-item">WhatsApp Channel</a></li>
-                <li><a href="https://discord.gg/YMDG4xBYmp" target="_blank" rel="noopener noreferrer" className="footer-link-item">Discord</a></li>
-                <li><a href="https://secureworldz.pro/" target="_blank" rel="noopener noreferrer" className="footer-link-item">Secure Worldz</a></li>
+                <li><a href="https://www.youtube.com/@TheCyberJai" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="footer-link-item">YouTube</a></li>
+                <li><a href="https://www.instagram.com/thecyberjai" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="footer-link-item">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@cyber_voyage" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="footer-link-item">Cyber Voyage</a></li>
+                <li><a href="https://x.com/Dragothetool" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="footer-link-item">X (Twitter)</a></li>
+                <li><a href="https://chat.whatsapp.com/JmtUdMv4rdN6j9uQeXrnLN" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="footer-link-item">WhatsApp Channel</a></li>
+                <li><a href="https://discord.gg/YMDG4xBYmp" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="footer-link-item">Discord</a></li>
+                <li><a href="https://secureworldz.pro/" target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" className="footer-link-item">Secure Worldz</a></li>
               </ul>
             </div>
 
@@ -852,11 +864,13 @@ export default function App() {
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   required
+                  maxLength={254}
+                  autoComplete="email"
                 />
                 <button type="submit" className="neo-btn neo-btn-primary neo-btn-sm" style={{ padding: '0 1rem' }}>OK</button>
               </form>
               {newsletterFeedback && (
-                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#aaccaa', fontWeight: 'bold' }}>
+                <div role="alert" aria-live="polite" style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#aaccaa', fontWeight: 'bold' }}>
                   {newsletterFeedback}
                 </div>
               )}
