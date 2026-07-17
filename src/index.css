@@ -1101,3 +1101,153 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1320px;
   }
 }
+
+/* ==========================================
+   ===== CAREER PAGE STYLES =====
+   ========================================== */
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+.trend-item {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+  align-items: flex-start;
+}
+.trend-item:last-child { border-bottom: none; padding-bottom: 0; }
+.trend-number {
+  min-width: 28px; height: 28px;
+  border: var(--border-thin);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.85rem;
+  background: var(--color-black); color: var(--color-white);
+  flex-shrink: 0;
+}
+.trend-content { display: flex; flex-direction: column; gap: 0.25rem; }
+.trend-title {
+  font-size: 1.05rem; margin: 0; text-transform: none;
+  line-height: 1.35; color: var(--color-black); font-weight: 700;
+}
+.trend-desc { color: #555555; font-size: 0.9rem; line-height: 1.45; }
+@media (max-width: 768px) {
+  .career-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+/* ==========================================
+   ===== DRAGON LOADER - PROFESSIONAL =====
+   ========================================== */
+.dragon-loader-overlay {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: #ffffff;
+  z-index: 99999;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.loader-content-wrap {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 2.5rem;
+}
+.dragon-logo-ring {
+  position: relative; width: 180px; height: 180px;
+  display: flex; align-items: center; justify-content: center;
+}
+.dragon-logo-glow-outer {
+  position: absolute; inset: -14px; border-radius: 50%;
+  border: 3px solid rgba(255,80,0,0.35);
+  animation: ring-pulse 1.6s ease-in-out infinite;
+}
+.dragon-logo-glow-inner {
+  position: absolute; inset: -4px; border-radius: 50%;
+  animation: ring-spin 3s linear infinite;
+  background: conic-gradient(from 0deg,rgba(255,80,0,0.9) 0deg,rgba(255,200,0,0.6) 90deg,rgba(255,80,0,0.05) 180deg,rgba(255,80,0,0.9) 360deg);
+  mask: radial-gradient(circle, transparent 82%, black 83%);
+  -webkit-mask: radial-gradient(circle, transparent 82%, black 83%);
+}
+@keyframes ring-pulse {
+  0%,100% { transform:scale(1);    opacity:0.55; }
+  50%      { transform:scale(1.12); opacity:1;    }
+}
+@keyframes ring-spin {
+  from { transform:rotate(0deg); } to { transform:rotate(360deg); }
+}
+.dragon-logo-img {
+  width: 140px; height: 140px; object-fit: contain;
+  border-radius: 50%; position: relative; z-index: 2;
+  animation: logo-float 2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 18px rgba(255,100,0,0.5));
+}
+@keyframes logo-float {
+  0%   { transform:translateY(0);    filter:drop-shadow(0 0 14px rgba(255,100,0,0.45)); }
+  100% { transform:translateY(-8px); filter:drop-shadow(0 0 28px rgba(255,140,0,0.85)); }
+}
+.fire-embers {
+  position: absolute; bottom: 0; left: 50%;
+  width: 0; height: 0; pointer-events: none; z-index: 1;
+}
+.ember {
+  position: absolute;
+  width: var(--size, 8px); height: var(--size, 8px);
+  border-radius: 50%;
+  background: radial-gradient(circle,#ffe066 0%,#ff6600 55%,rgba(255,40,0,0) 100%);
+  bottom: 0; left: 0; opacity: 0;
+  animation: ember-burst 1.4s ease-out infinite;
+}
+@keyframes ember-burst {
+  0%   { transform:translate(0,0) scale(1); opacity:1; }
+  60%  { opacity:0.7; }
+  100% { transform:translate(var(--tx,0),var(--ty,60px)) scale(0.15); opacity:0; }
+}
+.loader-wordmark {
+  display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+}
+.loader-wordmark-text {
+  font-family: var(--font-heading); font-weight: 900;
+  font-size: 2.4rem; letter-spacing: 0.28em;
+  color: var(--color-black); line-height: 1;
+}
+.loader-wordmark-sub {
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.2em; color: #999999; text-transform: uppercase;
+}
+.loader-bar-wrap {
+  width: 220px; height: 4px;
+  background: #e5e5e5; border-radius: 2px; overflow: hidden;
+}
+.loader-bar-fill {
+  height: 100%; width: 0%; border-radius: 2px;
+  background: linear-gradient(90deg,#ff6600,#ff3300);
+  animation: fill-loader 2.2s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+@keyframes fill-loader {
+  0% { width:0%; } 100% { width:100%; }
+}
+
+/* ==========================================
+   ===== EVENT MODAL REGISTRATION =====
+   ========================================== */
+.modal-overlay {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 100000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+}
+.modal-content {
+  background-color: var(--color-white);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-flat-large);
+  width: 100%; max-width: 500px; padding: 2.5rem;
+  position: relative; display: flex; flex-direction: column; gap: 1.5rem;
+}
+.modal-close-btn {
+  position: absolute; top: 1rem; right: 1rem;
+  border: var(--border-thin); background: var(--color-white);
+  padding: 0.25rem 0.5rem; font-weight: 800; font-size: 1rem;
+}
+.modal-close-btn:hover { background: var(--color-black); color: var(--color-white); }
